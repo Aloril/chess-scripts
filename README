@@ -1,5 +1,7 @@
 This is quick and dirty undo search script. Too many things are hardcoded, etc..
 
+Requires http://python-chess.readthedocs.io/en/latest/index.html and SQLite3 python libraries.
+
 Usage:
 undo_search.py time_in_milliseconds_per_move
 (it was originally nodes/move, but asmFish doesn't support it)
