@@ -1,0 +1,16 @@
+This is quick and dirty undo search script. Too many things are hardcoded, etc..
+
+Usage:
+undo_search.py time_in_milliseconds_per_move
+(it was originally nodes/move, but asmFish doesn't support it)
+
+Currently engines are hardcocded into script, search for UndoSearch method __init__
+and there for "stockfish_log_time" and "brainfish_log". Also you might want to edit "SyzygyPath".
+
+Interrupting: create file named break_search.flag where script is running.
+Positions are stored in SQLite3 and if chess.db exitsts, then search is resumed.
+
+To mark book moves in alpha_beta log file, run:
+book_moves.py brainfish_timestamp.log log/alpha_beta_timestamp.log > output.log
+
+Edit paths in brainfish_log script.
